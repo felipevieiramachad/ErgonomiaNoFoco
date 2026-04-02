@@ -25,29 +25,31 @@ new Chart(ctx, {
             groups: ['name'],
 
             backgroundColor(ctx) {
-                if (!ctx || !ctx.raw) return '#2b2b2b';
+                if (!ctx || !ctx.raw) return '#111';
 
                 const value = ctx.raw.v || 0;
 
-                if (value > 15) return '#e54848'; // vermelho mais suave
-                if (value > 8) return '#f2b705';  // amarelo mais elegante
-                return '#3a3a3a'; // cinza mais claro (menos pesado)
+                if (value > 15) return '#d99a00';
+                if (value > 8) return '#111';
+                return '#111';
             },
 
             borderWidth: 1,
-            borderColor: '#1c1c1c',
+            borderColor: '#111',
+            hoverBorderColor: '#d99a00',
+            hoverBorderWidth: 1.5,
             borderRadius: 6,
             spacing: 0.5,
 
             labels: {
                 display: true,
-                color: '#f1f1f1',
+                color: '#fff',
                 font: function (ctx) {
                     const value = ctx.raw?.v || 0;
 
                     return {
                         size: value > 15 ? 18 : value > 8 ? 13 : 8,
-                        weight: '600'
+                        weight: '500'
                     };
                 },
                 formatter(ctx) {
@@ -58,7 +60,7 @@ new Chart(ctx, {
                 }
             },
 
-            hoverBorderColor: '#ffffff',
+            hoverBorderColor: '#fff',
             hoverBorderWidth: 1.5,
         }]
     },
@@ -74,12 +76,13 @@ new Chart(ctx, {
             },
 
             tooltip: {
-                backgroundColor: '#1a1a1a',
-                titleColor: '#f5b400',
+                backgroundColor: '#222',
+                titleColor: '#d99a00',
                 bodyColor: '#fff',
-                borderColor: '#333',
+                borderColor: '#222',
                 borderWidth: 1,
-                padding: 10,
+                padding: 12,
+                displayColors: false,
 
                 callbacks: {
                     title: (ctx) => ctx[0].raw?.g || '',

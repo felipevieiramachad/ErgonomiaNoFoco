@@ -55,6 +55,9 @@ button,
   padding: 10px 20px;
   color: #f5b400;
   text-decoration: none;
+  border-radius: 6px;
+  box-shadow: none;
+  cursor: pointer;
 }
 
 .hero {
