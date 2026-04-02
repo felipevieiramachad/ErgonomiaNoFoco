@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.header {
+  padding: 20px 0px;
+  border-bottom: 1px solid #222;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo span {
+  color: #f5b400;
+}
+
+nav a {
+  margin: 0px 10px;
+  color: #aaa;
+  text-decoration: none;
+}
+
+button,
+.btn {
+  background: #f5b400;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.btn-outline {
+  border: 1px solid #f5b400;
+  padding: 10px 20px;
+  color: #f5b400;
+  text-decoration: none;
+}
+
+.hero {
+  padding: 60px 0px 20px;
+}
+
+.hero h1 {
+  font-size: 42px;
+}
+
+.hero h1 span {
+  color: #f5b400;
+}
+
+.hero-buttons {
+  margin: 20px 0px;
+}
+
+.hero-instagram {
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.insta-header {
+  color: #f5b400;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.insta-carousel {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.insta-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.insta-post {
+  min-width: 180px;
+  height: 220px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.insta-post img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.insta-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.insta-post:hover img {
+  transform: scale(1.1);
+}
+
+.clients {
+  text-align: center;
+  padding: 40px 0px;
+  color: #888;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.fake-chart {
+  background: linear-gradient(120deg, #222, #111);
+  border-radius: 10px;
+  height: 400px;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.chart-box {
+  background: linear-gradient(145deg, #111, #000);
+  padding: 20px;
+  border-radius: 16px;
+  height: 400px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.chart-box canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.services {
+  padding: 80px 0px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.accordion .item {
+  margin: 10px 0px;
+  padding: 15px;
+  background: #111;
+  border-radius: 6px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.cases {
+  padding: 20px 0px 20px;
+}
+
+.case {
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.case:hover {
+  border: 1px solid #f5b400;
+  transform: translateY(-5px);
+}
+
+.cta {
+  background: #222;
+  text-align: center;
+  padding: 80px 0px;
+}
+
+.cta-sub {
+  color: #aaa;
+  margin-bottom: 40px;
+}
+
+.cta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form input,
+.form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #111;
+  color: #fff;
+}
+
+.form textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+.form button {
+  margin-top: 10px;
+}
+
+.cta-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.btn.whatsapp {
+  background: #25D366;
+  color: #000;
+  width: 220px;
+  text-align: center;
+}
+
+.btn.instagram {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+  color: #fff;
+  width: 220px;
+  text-align: center;
+}
+
+.cta-note {
+  color: #aaa;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+}
