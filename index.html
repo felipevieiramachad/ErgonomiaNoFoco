@@ -13,15 +13,15 @@
     <div class="container nav">
       <div class="logo">ERGONOMIA <span>NO FOCO</span></div>
       <nav>
-        <a href="#">Início</a>
-        <a href="#">Serviços</a>
-        <a href="#">Resultados</a>
-        <a href="#">Contato</a>
+        <a href="#inicio">Início</a>
+        <a href="#clientes">Dados</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
       </nav>
-      <a href="#" class="btn">Fale Agora</a>
+      <a href="#contato" class="btn">Fale Agora</a>
     </div>
   </header>
-  <section class="hero">
+  <section id="inicio" class="hero">
     <div class="container hero-grid">
       <div class="hero-text">
         <h1>
@@ -36,39 +36,44 @@
         <br>
       </div>
       <div class="hero-buttons">
-        <a href="#" class="btn">Solicitar Análise</a>
-        <a href="#" class="btn-outline">Ver Serviços</a>
+        <a href="#contato" class="btn">Solicitar Análise</a>
+        <a href="#servicos" class="btn-outline">Ver Serviços</a>
       </div>
       <div class="hero-instagram">
         <div class="insta-header">
-          <span>@ergonomianofoco</span>
+          <span><a href="https://www.instagram.com/ergonomianofoco/" target="_blank">@ergonomianofoco</a></span>
         </div>
         <div class="insta-carousel">
           <div class="insta-post">
-            <img src="img/post1.jpg" alt="">
-            <div class="insta-overlay">Análise ergonômica</div>
+            <a href="https://www.instagram.com/p/DWkKobkvJ9g/" target="_blank"><img src="img/post5.jpg"
+                alt="Imagem do instagram @ergonomianofoco"></a>
+            <div class="insta-overlay">Peso</div>
           </div>
           <div class="insta-post">
-            <img src="img/post2.jpg" alt="">
-            <div class="insta-overlay">Postura correta</div>
+            <a href="https://www.instagram.com/p/DV81fQEDtcm/?img_index=1" target="_blank"><img src="img/post2.jpg"
+                alt="Imagem do instagram @ergonomianofoco"></a>
+            <div class="insta-overlay">Lesões</div>
           </div>
           <div class="insta-post">
-            <img src="img/post3.jpg" alt="">
-            <div class="insta-overlay">NR-17 na prática</div>
+            <a href="https://www.instagram.com/p/DVy55H8Di81/?img_index=1" target="_blank"><img src="img/post3.jpg"
+                alt="Imagem do instagram @ergonomianofoco"></a>
+            <div class="insta-overlay">4 erros NR-17</div>
           </div>
           <div class="insta-post">
-            <img src="img/post4.jpg" alt="">
-            <div class="insta-overlay">Prevenção de lesões</div>
+            <a href="https://www.instagram.com/p/DWg4nsYju74/?img_index=1" target="_blank"><img src="img/post4.jpg"
+                alt="Imagem do instagram @ergonomianofoco"></a>
+            <div class="insta-overlay">Empresas NR-17</div>
           </div>
           <div class="insta-post">
-            <img src="img/post5.jpg" alt="">
-            <div class="insta-overlay">Ambiente seguro</div>
+            <a href="https://www.instagram.com/p/DWAH-xTDrEU/?img_index=1" target="_blank"><img src="img/post1.jpg"
+                alt="Imagem do instagram @ergonomianofoco"></a>
+            <div class="insta-overlay">Postura Perfeita</div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="clients">
+  <section id="clientes" class="clients">
     <div class="container">
       <p>Empresas que confiam</p>
       <div class="logos">
@@ -79,7 +84,7 @@
       </div>
     </div>
   </section>
-  <section class="insights">
+  <section id="dados" class="insights">
     <div class="container grid-2">
       <div>
         <h2>Dados que geram decisões</h2>
@@ -89,14 +94,15 @@
           a tomar decisões estratégicas com base em dados reais.
         </p>
         <br><br>
-        <a href="#" class="btn-outline">Saiba mais</a>
+        <a href="https://smartlabbr.org/sst/localidade/0?dimensao=perfilCasosAfastamentos" target="_blank"
+          class="btn-outline">Saiba mais</a>
       </div>
       <div class="chart-box">
         <canvas id="graficoTreemap"></canvas>
       </div>
     </div>
   </section>
-  <section class="services">
+  <section id="servicos" class="services">
     <div class="container">
       <h2>Serviços</h2>
       <br>
@@ -110,7 +116,7 @@
       </div>
     </div>
   </section>
-  <section class="benefits">
+  <section id="beneficios" class="benefits">
     <div class="container grid-2">
       <div>
         <h2>Resultados reais para sua empresa</h2>
@@ -128,7 +134,7 @@
       </div>
     </div>
   </section>
-  <section class="cases">
+  <section id="casos" class="cases">
     <div class="container grid-4">
       <div class="case">
         <h3>Dores na equipe?</h3>
@@ -149,24 +155,24 @@
       </div>
     </div>
   </section>
-  <section class="cta">
+  <section id="contato" class="cta">
     <div class="container">
       <h2>Solicite uma avaliação gratuita</h2>
       <p class="cta-sub">Preencha os dados ou fale direto pelo WhatsApp</p>
       <div class="cta-grid">
-        <form class="form">
-          <input type="text" placeholder="Seu nome" required>
-          <input type="email" placeholder="Seu e-mail" required>
-          <input type="tel" placeholder="Telefone" required>
-          <input type="text" placeholder="Empresa">
-          <textarea placeholder="Descreva sua necessidade" required></textarea>
+        <form id="formContato" class="form">
+          <input id="nome" type="text" placeholder="Seu nome" required>
+          <input id="email" type="email" placeholder="Seu e-mail" required>
+          <input id="telefone" type="tel" placeholder="Telefone" required>
+          <input id="empresa" type="text" placeholder="Empresa">
+          <textarea id="mensagem" placeholder="Descreva sua necessidade" required></textarea>
           <button type="submit" class="btn">Solicitar avaliação</button>
         </form>
         <div class="cta-contact">
-          <a href="" target="_blank" class="btn whatsapp">
+          <a href="https://wa.me/5547991470222" target="_blank" class="btn whatsapp">
             WhatsApp
           </a>
-          <a href="" target="_blank" class="btn instagram">
+          <a href="https://www.instagram.com/ergonomianofoco/" target="_blank" class="btn instagram">
             Instagram
           </a>
           <p class="cta-note">

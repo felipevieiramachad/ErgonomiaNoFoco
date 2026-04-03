@@ -60,7 +60,7 @@ new Chart(ctx, {
                 }
             },
 
-            hoverBorderColor: '#fff',
+            hoverBorderColor: '#d99a00',
             hoverBorderWidth: 1.5,
         }]
     },
@@ -91,4 +91,31 @@ new Chart(ctx, {
             }
         }
     }
+});
+
+document.getElementById('formContato').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
+    const telefone = document.getElementById('telefone').value;
+    const empresa = document.getElementById('empresa').value;
+    const mensagem = document.getElementById('mensagem').value;
+
+    const texto =
+        `Olá, gostaria de solicitar uma avaliação:
+
+Nome: ${nome}
+Email: ${email}
+Telefone: ${telefone}
+Empresa: ${empresa}
+
+Necessidade:
+${mensagem}`;
+
+    const numero = '5547991470222';
+
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+    window.open(url, '_blank');
 });
